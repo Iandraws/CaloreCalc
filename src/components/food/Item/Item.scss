@@ -1,0 +1,28 @@
+$url: url(https://images.unsplash.com/photo-1544070078-a212eda27b49?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+$b: 1.5em; // border-width
+$blur: blur(9px);
+$rect: inset(0);
+
+
+.food-wrapper {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    margin: 16px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid $b rgba(#000, .03);
+	max-width: 13em; max-height: 7em;
+	box-shadow: 2px 2px 5px rgba(#000, .2), 
+							2px 2px 17px rgba(#000, .35), 
+							2px 2px 25px rgba(#000, .5);
+                            cursor: pointer;
+
+    &:hover {
+        transform: scale(1.4);
+      }
+      border-radius: 15px;
+}
