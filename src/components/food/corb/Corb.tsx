@@ -1,5 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import { Food } from '../../../models/Food';
+import Item from '../Item/Item';
 import './corb.scss';
 
 const Corb = forwardRef((props, ref) => {
@@ -30,7 +31,13 @@ setItems([...items,item]);
 
 	return (
 		<div className='wrapper-corb'>
-			<div> Corb List</div>
+{items.map((item) => {
+				return (
+					<div>
+						<Item food={item} ></Item>
+					</div>
+				);
+			})}
 		</div>
 	);
 });

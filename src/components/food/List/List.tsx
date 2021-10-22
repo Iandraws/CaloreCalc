@@ -5,10 +5,10 @@ import './List.scss';
 
 function List({ doSomething }: any) {
 	const foods: Food[] = [
-		{ itemName: 'appel', quantity: 0, calorie: 100 },
-		{ itemName: 'anans', quantity: 0, calorie: 200 },
-		{ itemName: 'burger', quantity: 0, calorie: 300 },
-		{ itemName: 'carrot', quantity: 0, calorie: 60 },
+		{ itemName: 'appel', quantity: 0, calorie: 100,imageUrl:'https://res.cloudinary.com/mindchase/image/upload/v1634928182/appel_zairoq.jpg' },
+		{ itemName: 'anans', quantity: 0, calorie: 200,imageUrl:'https://res.cloudinary.com/mindchase/image/upload/v1634928426/ananasleder_sscc6h.jpg' },
+		{ itemName: 'burger', quantity: 0, calorie: 300,imageUrl:'https://res.cloudinary.com/mindchase/image/upload/v1634928503/burger_zcozim.jpg'},
+		{ itemName: 'carrot', quantity: 0, calorie: 60,imageUrl:'https://res.cloudinary.com/mindchase/image/upload/v1634928984/carrot-isolated-white-background-109799060_ksfikg.jpg'},
 	];
 
 	return (

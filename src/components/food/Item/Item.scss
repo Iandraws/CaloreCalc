@@ -7,7 +7,6 @@ $rect: inset(0);
 .food-wrapper {
     height: 50px;
     width: 50px;
-    background-color: red;
     margin: 16px;
     display: flex;
     position: relative;
@@ -25,4 +24,31 @@ $rect: inset(0);
         transform: scale(1.4);
       }
       border-radius: 15px;
+.food-name{
+    position: absolute;
+    top: -44px;
+    left: -16px;
+    background-color: lightgrey;
+    color: red;
+}
+.food-quantity{
+    position: absolute;
+    top: 5px;
+    right: -24px;
+    background-color: lightgrey;
+    color:blue;
+
+}
+
+
+.food-img{
+    position:absolute;
+    height: 50px;
+    width: 50px;
+ 
+
+
+}
+
+
 }
