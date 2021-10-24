@@ -1,6 +1,9 @@
 export interface Food {
-	itemName: string;
-	quantity: number;
+	name: string;
 	calorie: number;
-	imageUrl:string,
+	imageUrl: string;
+}
+
+export interface CorbFood extends Food {
+	quantity: number;
 }

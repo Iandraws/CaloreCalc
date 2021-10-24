@@ -3,52 +3,32 @@ $b: 1.5em; // border-width
 $blur: blur(9px);
 $rect: inset(0);
 
-
 .food-wrapper {
-    height: 50px;
-    width: 50px;
-    margin: 16px;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid $b rgba(#000, .03);
-	max-width: 13em; max-height: 7em;
-	box-shadow: 2px 2px 5px rgba(#000, .2), 
-							2px 2px 17px rgba(#000, .35), 
-							2px 2px 25px rgba(#000, .5);
-                            cursor: pointer;
+	height: 50px;
+	width: 50px;
+	margin: 16px;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: solid $b rgba(#000, 0.03);
+	max-width: 13em;
+	max-height: 7em;
 
-    &:hover {
-        transform: scale(1.4);
-      }
-      border-radius: 15px;
-.food-name{
-    position: absolute;
-    top: -44px;
-    left: -16px;
-    background-color: lightgrey;
-    color: red;
-}
-.food-quantity{
-    position: absolute;
-    top: 5px;
-    right: -24px;
-    background-color: lightgrey;
-    color:blue;
+	border-radius: 15px;
 
-}
+	.food-quantity {
+		position: absolute;
+		top: 5px;
+		right: -24px;
+		background-color: lightgrey;
+		color: blue;
+	}
 
-
-.food-img{
-    position:absolute;
-    height: 50px;
-    width: 50px;
- 
-
-
-}
-
-
+	.food-img {
+		position: absolute;
+		height: 50px;
+		width: 50px;
+	}
 }

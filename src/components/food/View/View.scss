@@ -1,6 +1,17 @@
-.foods-wrapper {
-    display: flex;
-    height: 100%;
-    flex-wrap: wrap;
-position: relative;
+.view {
+	display: flex;
+	height: 100%;
+	width: 100%;
+
+	.list {
+		width: 70%;
+		height: 500px;
+		padding: 16px;
+	}
+
+	.corb {
+		width: 30%;
+		height: 500px;
+		padding: 16px;
+	}
 }

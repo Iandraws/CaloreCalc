@@ -1,43 +1,39 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
-import { Food } from '../../../models/Food';
+import { CorbFood, Food } from '../../../models/Food';
 import Item from '../Item/Item';
 import './corb.scss';
 
 const Corb = forwardRef((props, ref) => {
-	const [items, setItems] = useState<Food[]>([]) ;
-
-console.log(items);
-
-
-
+	const [items, setItems] = useState<CorbFood[]>([]);
 
 	useImperativeHandle(ref, () => ({
 		addItemToCorb(item: Food) {
-const foundItem:any=items.find(element=>element.itemName===item.itemName)
-if(foundItem){
-foundItem.quantity+=1
-setItems([...items])
-
-}
-else{
-setItems([...items,item]);
-
-	}
+			const foundItem: CorbFood | undefined = items.find(
+				(corbFood) => corbFood.name === item.name
+			);
+			if (foundItem) {
+				foundItem.quantity += 1;
+				setItems([...items]);
+			} else {
+				setItems([...items, { ...item, quantity: 1 }]);
+			}
 		},
-		
-		
-		
 	}));
 
 	return (
-		<div className='wrapper-corb'>
-{items.map((item) => {
-				return (
-					<div>
-						<Item food={item} ></Item>
-					</div>
-				);
-			})}
+		<div className='corb-view'>
+			<div className='wrapper-corb'>
+				{items.map((item) => {
+					return <Item food={item}></Item>;
+				})}
+			</div>
+			<div className='calorie-total'>
+				Total Calorie:
+				{items.reduce(
+					(previous, current) => previous + current.quantity * current.calorie,
+					0
+				)}
+			</div>{' '}
 		</div>
 	);
 });
