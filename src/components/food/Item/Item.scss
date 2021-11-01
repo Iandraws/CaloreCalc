@@ -1,34 +1,7 @@
-$url: url(https://images.unsplash.com/photo-1544070078-a212eda27b49?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-$b: 1.5em; // border-width
-$blur: blur(9px);
-$rect: inset(0);
 
-.food-wrapper {
-	height: 50px;
-	width: 50px;
-	margin: 16px;
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border: solid $b rgba(#000, 0.03);
-	max-width: 13em;
-	max-height: 7em;
 
-	border-radius: 15px;
-
-	.food-quantity {
-		position: absolute;
-		top: 5px;
-		right: -24px;
-		background-color: lightgrey;
-		color: blue;
-	}
-
-	.food-img {
-		position: absolute;
-		height: 50px;
-		width: 50px;
-	}
+.Card{
+	height: 300px;
+	padding: 20px;
+	margin: 20px;
 }

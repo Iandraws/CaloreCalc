@@ -18,6 +18,8 @@ function View(): JSX.Element {
 			<div className='corb'>
 				<Corb ref={corbRef}></Corb>
 			</div>
+			<div>
+			</div>
 		</div>
 	);
 }

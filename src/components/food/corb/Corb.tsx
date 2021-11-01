@@ -1,7 +1,17 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
+import ItemCorb from './ItemCorb'
 import { CorbFood, Food } from '../../../models/Food';
-import Item from '../Item/Item';
+import Box from '@mui/material/Box';
 import './corb.scss';
+
+const commonStyles = {
+	bgcolor: 'background.paper',
+	borderColor: 'text.primary',
+	m: 3,
+	border: 2,
+	width: '400px',
+	height: '100%',
+};
 
 const Corb = forwardRef((props, ref) => {
 	const [items, setItems] = useState<CorbFood[]>([]);
@@ -21,10 +31,10 @@ const Corb = forwardRef((props, ref) => {
 	}));
 
 	return (
-		<div className='corb-view'>
-			<div className='wrapper-corb'>
+		<Box className='corb-view' sx={{ ...commonStyles, borderRadius: 1 }}>
+			<div>
 				{items.map((item) => {
-					return <Item food={item}></Item>;
+					return <ItemCorb  food={item}></ItemCorb>;
 				})}
 			</div>
 			<div className='calorie-total'>
@@ -33,8 +43,8 @@ const Corb = forwardRef((props, ref) => {
 					(previous, current) => previous + current.quantity * current.calorie,
 					0
 				)}
-			</div>{' '}
-		</div>
+			</div>
+		</Box>
 	);
 });
 
