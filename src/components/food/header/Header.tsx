@@ -4,7 +4,7 @@ import './Header.scss'
 function Header():JSX.Element {
     return (
         <div className= 'Header'>
-           welceome to my cacc APP 
+           welceome to my Calorie Calculator
         </div>
     )
 }
