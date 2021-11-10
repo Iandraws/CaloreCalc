@@ -1,8 +1,9 @@
 import { useRef } from 'react';
 import { Food } from '../../../models/Food';
 import Corb from '../corb/Corb';
+import Header from '../header/Header';
 import List from '../List/List';
-import './View.scss';
+import './View.css';
 
 function View(): JSX.Element {
 	const corbRef = useRef() as any;
@@ -11,15 +12,17 @@ function View(): JSX.Element {
 	};
 
 	return (
-		<div className='view'>
-			<div className='list'>
+		<div className='container'>
+			<div className='Header'>
+				<Header></Header>
+			</div>
+			<div className='List'>
 				<List doSomething={doSomething}></List>
 			</div>
-			<div className='corb'>
+			<div className='Corb'>
 				<Corb ref={corbRef}></Corb>
 			</div>
-			<div>
-			</div>
+			<div></div>
 		</div>
 	);
 }

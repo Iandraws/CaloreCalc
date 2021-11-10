@@ -3,7 +3,6 @@ import ItemCorb from './ItemCorb'
 import { CorbFood, Food } from '../../../models/Food';
 import Box from '@mui/material/Box';
 import './corb.scss';
-
 const commonStyles = {
 	bgcolor: 'background.paper',
 	borderColor: 'text.primary',
