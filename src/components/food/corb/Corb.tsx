@@ -32,11 +32,12 @@ const Corb = forwardRef((props, ref) => {
 
 	return (
 		<Box className='corb-view' sx={{ ...commonStyles, borderRadius: 1 }}>
-			<div>
+			<div className= "ItemCorb">
 				{items.map((item) => {
 					return <ItemCorb  food={item}></ItemCorb>;
 				})}
 			</div>
+			
 			<div className='calorie-total'>
 				Total Calorie:
 				{items.reduce(

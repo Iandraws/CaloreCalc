@@ -29,6 +29,7 @@ function List({ doSomething }: any) {
 			imageUrl:
 				'https://res.cloudinary.com/mindchase/image/upload/v1634928984/carrot-isolated-white-background-109799060_ksfikg.jpg',
 		},
+	
 	];
 
 	return (
